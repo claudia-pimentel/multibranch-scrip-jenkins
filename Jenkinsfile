@@ -13,8 +13,6 @@ properties([
     ])
 ])
 node { 
-    
-     git branch: "${params.BRANCH}", url: 'https://github.com/jenkinsci/git-parameter-plugin.git'
   
     stage('Clone repo') {
         //bat "git config core.longpaths true"
