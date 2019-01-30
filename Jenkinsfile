@@ -4,7 +4,7 @@ properties([
                      branchFilter: 'origin/(.*)',
                      defaultValue: 'master',
                      description: '',
-                     name: 'BRANCH',
+                     name: 'BRANCH_TEST',
                      quickFilterEnabled: false,
                      selectedValue: 'NONE',
                      sortMode: 'NONE',
@@ -16,7 +16,7 @@ node {
   
     stage('Clone repo') {
         //bat "git config core.longpaths true"
-        git branch: "BRANCH" , url: "https://github.com/claudia-pimentel/dotnetcore-testproj"
+        git branch: "${BRANCH_TEST}" , url: "https://github.com/claudia-pimentel/dotnetcore-testproj"
     }
     stage('Build') { 
         echo "Running build"
