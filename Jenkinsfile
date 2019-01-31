@@ -2,7 +2,7 @@ properties([
     parameters([
         gitParameter(branch: '',
                      branchFilter: 'origin/(.*)',
-                     defaultValue: 'master',
+                     defaultValue: 'teste1',
                      description: '',
                      name: 'BRANCH',
                      quickFilterEnabled: false,
