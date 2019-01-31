@@ -1,7 +1,7 @@
 node { 
   
     stage ('Save Branches'){
-        sh 'git branch > $BRANCH_TEST'    
+        sh 'git branch > BRANCH_TEST'    
     }
     
     stage('Clone repo') {
