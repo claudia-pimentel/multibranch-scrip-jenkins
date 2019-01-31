@@ -1,6 +1,6 @@
 node { 
   
-    stage ('Save Branches'){
+    stage ('Save Branch'){
         sh 'git branch > BRANCH_TEST'    
     }
     
