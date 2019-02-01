@@ -1,7 +1,11 @@
 node { 
   
     stage ('Save Branch'){
-      sh 'git branch > BRANCH_TEST'    
+      BRANCH_TEST = []
+      git branch > allbranches
+      allbranches.split(' ').each{BRANCH_TEST.add}
+      }
+      
     }
     
   for ((cont=0; cont<${#BRANCH_TEST[@]}; cont++));
