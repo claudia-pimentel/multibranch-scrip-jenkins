@@ -1,7 +1,7 @@
 node { 
   
     stage ('Save Branch'){
-      BRANCH_TEST = [];
+      def BRANCH_TEST = [];
       git branch > allbranches;
       allbranches.split(' ').each{BRANCH_TEST.add}
                           }
